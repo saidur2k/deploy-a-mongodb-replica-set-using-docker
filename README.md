@@ -26,6 +26,14 @@
 
 # Step 1 — Create our 3 docker-machines
 
+To create a docker machine we need to issue the next command in a terminal:
+
+`$ docker-machine create -d virtualbox manager1`
+
+This command will create a machine called manager1 using virtualbox as our virtualization provider.
+
+Now let’s create the two secondary docker-machines
+
 
 # Helpful commands
 
