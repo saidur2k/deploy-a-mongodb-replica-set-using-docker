@@ -40,21 +40,23 @@ Now let’s create the two secondary docker-machines
 ## docker-machine ls
 Shows a list of docker-machines
 
+`$ docker-machine ls`
+|NAME   |ACTIVE   |URL          |STATE     |URL                         |SWARM   |DOCKER   |ERRORS|
+|-------|:-------:|:------------|:---------|:---------------------------|:------:|:-------:|------|
+|bar    |-        |virtualbox   |Running   |tcp://192.168.99.101:2376   |        |v1.9.1   |      |
+|baz    |-        |virtualbox   |Running   |tcp://192.168.99.103:2376   |        |v1.9.1   |      |
+|foo    |-        |virtualbox   |Running   |tcp://192.168.99.100:2376   |        |v1.9.1   |      |
+|qix    |-        |virtualbox   |Running   |tcp://192.168.99.102:2376   |        |v1.9.1   |      |
 
 ## docker-machine rm
 Remote a docker machine
 
-$ docker-machine ls
-NAME   ACTIVE   URL          STATE     URL                         SWARM   DOCKER   ERRORS
-bar    -        virtualbox   Running   tcp://192.168.99.101:2376           v1.9.1
-baz    -        virtualbox   Running   tcp://192.168.99.103:2376           v1.9.1
-foo    -        virtualbox   Running   tcp://192.168.99.100:2376           v1.9.1
-qix    -        virtualbox   Running   tcp://192.168.99.102:2376           v1.9.1
 
-$ docker-machine rm baz
+
+`$ docker-machine rm baz`
 About to remove baz
 Are you sure? (y/n): y
 Successfully removed baz
 
 ## docker-machine remove all
-$ docker-machine rm -y $(docker-machine ls -q)
+`$ docker-machine rm -y $(docker-machine ls -q)`
